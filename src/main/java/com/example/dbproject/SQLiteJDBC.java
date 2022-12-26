@@ -241,4 +241,65 @@ public class SQLiteJDBC {
         System.out.println("Deletion successfully");
     }
 
+    /* Select & Print Partly */
+    public static void selectPart(String targetCommand, String inputCommand){
+        Connection c = null;
+        Statement stmt = null;
+        try {
+            Class.forName("org.sqlite.JDBC");
+            c = DriverManager.getConnection("jdbc:sqlite:hgb.sqlite");
+            c.setAutoCommit(false);
+
+            stmt = c.createStatement();
+            ResultSet rs = stmt.executeQuery(inputCommand);
+
+
+            switch (targetCommand){
+                case "COUNT":
+                    while ( rs.next() ) {
+                        String country = rs.getString("Country");
+                        System.out.print( "Country: " + country + "/ ");
+                        System.out.printf("Count(*): " + rs.getString("Count(*)"));
+                        System.out.println();
+                    }
+                    break;
+
+                case "SUM":
+                    System.out.printf("SUM(Amount): " + rs.getString("SUM(Amount)"));
+                    System.out.println();
+                    break;
+
+                case "MAX":
+                    System.out.printf("max(Amount): " + rs.getString("max(Amount)"));
+                    System.out.println();
+                    break;
+
+                case "MIN":
+                    System.out.printf("min(Amount): " + rs.getString("min(Amount)"));
+                    System.out.println();
+                    break;
+
+                case "AVG":
+                    System.out.printf("avg(Amount): " + rs.getString("avg(Amount)"));
+                    System.out.println();
+                    break;
+
+                case "HAVING":
+                    while ( rs.next() ) {
+                        System.out.printf("HGB_Business No: " + rs.getString("HGB_Business No") + "/ ");
+                        System.out.printf("Count(*): " + rs.getString("Count(*)"));
+                        System.out.println();
+                    }
+                    break;
+            }
+
+            rs.close();
+            stmt.close();
+            c.close();
+        } catch ( Exception e ) {
+            System.err.println( e.getClass().getName() + ": " + e.getMessage() );
+            System.exit(0);
+        }
+        // System.out.println("Select Part successfully");
+    }
 }
