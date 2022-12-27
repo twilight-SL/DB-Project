@@ -6,6 +6,7 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 
 public class SQLiteJDBC {
+
     /* SQL INSERT Operation */
     public static void insertion(String inputCommand)
     {
@@ -27,6 +28,7 @@ public class SQLiteJDBC {
             System.exit(0);
         }
         System.out.println("Inserted successfully");
+        System.out.println("----------------------------------------------------------------------------------------------------------------------");
     }
 
     /* SQL SELECT Operation */
@@ -195,6 +197,7 @@ public class SQLiteJDBC {
             System.exit(0);
         }
         System.out.println("Select done successfully");
+        System.out.println("----------------------------------------------------------------------------------------------------------------------");
     }
 
     /* SQL UPDATE Operation */
@@ -217,6 +220,7 @@ public class SQLiteJDBC {
             System.exit(0);
         }
         System.out.println("Update successfully");
+        System.out.println("----------------------------------------------------------------------------------------------------------------------");
     }
 
     /* SQL DELETE Operation */
@@ -239,6 +243,7 @@ public class SQLiteJDBC {
             System.exit(0);
         }
         System.out.println("Deletion successfully");
+        System.out.println("----------------------------------------------------------------------------------------------------------------------");
     }
 
     /* Select & Print Partly */
@@ -300,6 +305,6 @@ public class SQLiteJDBC {
             System.err.println( e.getClass().getName() + ": " + e.getMessage() );
             System.exit(0);
         }
-        // System.out.println("Select Part successfully");
+        System.out.println("----------------------------------------------------------------------------------------------------------------------");
     }
 }

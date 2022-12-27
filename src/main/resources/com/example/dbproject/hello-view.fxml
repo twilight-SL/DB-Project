@@ -4,39 +4,39 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane fx:id="anchorPane" blendMode="MULTIPLY" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dbproject.HelloController">
+<AnchorPane fx:id="anchorPane" blendMode="MULTIPLY" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dbproject.HelloController">
     <children>
-        <Label fx:id="detectText" alignment="CENTER" contentDisplay="CENTER" layoutX="35.0" layoutY="290.0" prefHeight="25.0" prefWidth="650.0" textAlignment="CENTER" />
+        <Label fx:id="detectText" alignment="CENTER" contentDisplay="CENTER" layoutX="60.0" layoutY="265.0" prefHeight="25.0" prefWidth="1050.0" textAlignment="CENTER" />
         <Button fx:id="btnQuery" blendMode="DARKEN" layoutX="150.0" layoutY="200.0" mnemonicParsing="false" onAction="#onButtonClick" prefHeight="20.0" prefWidth="75.0" text="Search">
          <font>
             <Font name="System Bold" size="13.0" />
          </font></Button>
-        <Label alignment="CENTER" contentDisplay="CENTER" graphicTextGap="10.0" layoutX="14.0" layoutY="22.0" lineSpacing="5.0" prefHeight="19.0" prefWidth="115.0" text="Query Tool" textAlignment="CENTER">
+        <Label alignment="CENTER" contentDisplay="CENTER" graphicTextGap="10.0" layoutX="29.0" layoutY="32.0" lineSpacing="5.0" prefHeight="19.0" prefWidth="100.0" text="Query Tool" textAlignment="CENTER">
             <font>
-                <Font name="System Bold Italic" size="12.0" />
+                <Font name="System Bold Italic" size="14.0" />
             </font>
         </Label>
-        <Label alignment="CENTER" contentDisplay="CENTER" graphicTextGap="10.0" layoutX="14.0" layoutY="155.0" lineSpacing="5.0" prefHeight="19.0" prefWidth="129.0" text="Query Keywords" textAlignment="CENTER">
+        <Label alignment="CENTER" contentDisplay="CENTER" graphicTextGap="10.0" layoutX="15.0" layoutY="150.0" lineSpacing="5.0" prefHeight="19.0" prefWidth="129.0" text="Query Keywords" textAlignment="CENTER">
             <font>
-                <Font name="System Bold Italic" size="12.0" />
+                <Font name="System Bold Italic" size="14.0" />
             </font>
         </Label>
-        <Separator fx:id="textField" layoutX="35.0" layoutY="110.0" prefHeight="2.0" prefWidth="630.0" />
-        <Label alignment="CENTER" contentDisplay="CENTER" graphicTextGap="10.0" layoutX="31.0" layoutY="335.0" lineSpacing="5.0" prefHeight="23.0" prefWidth="64.0" text="Result" textAlignment="CENTER">
+        <Separator fx:id="textField" layoutX="29.0" layoutY="102.0" prefHeight="6.0" prefWidth="928.0" />
+        <Label alignment="CENTER" contentDisplay="CENTER" graphicTextGap="10.0" layoutX="47.0" layoutY="302.0" lineSpacing="5.0" prefHeight="28.0" prefWidth="64.0" text="Result" textAlignment="CENTER">
             <font>
-                <Font name="System Bold Italic" size="12.0" />
+                <Font name="System Bold Italic" size="16.0" />
             </font>
         </Label>
-      <ComboBox fx:id="comboBox" layoutX="150.0" layoutY="20.0" prefHeight="23.0" prefWidth="370.0" />
-      <TextField fx:id="textInput" layoutX="150.0" layoutY="150.0" prefHeight="32.0" prefWidth="370.0" promptText="Input SQL Command" />
-      <TextArea fx:id="textArea" layoutX="31.0" layoutY="380.0" prefHeight="285.0" prefWidth="665.0" />
-      <Label alignment="CENTER" contentDisplay="CENTER" graphicTextGap="10.0" layoutX="570.0" layoutY="120.0" lineSpacing="5.0" prefHeight="19.0" prefWidth="100.0" text="Table Name" textAlignment="CENTER">
+      <ComboBox fx:id="comboBox" layoutX="150.0" layoutY="30.0" prefHeight="28.0" prefWidth="450.0" />
+      <TextField fx:id="textInput" layoutX="150.0" layoutY="145.0" prefHeight="33.0" prefWidth="450.0" promptText="Input SQL Command" />
+      <TextArea fx:id="textArea" layoutX="20.0" layoutY="350.0" prefHeight="315.0" prefWidth="1060.0" />
+      <Label alignment="CENTER" contentDisplay="CENTER" graphicTextGap="10.0" layoutX="683.0" layoutY="117.0" lineSpacing="5.0" prefHeight="19.0" prefWidth="100.0" text="Table Name" textAlignment="CENTER">
          <font>
-            <Font name="System Bold Italic" size="12.0" />
+            <Font name="System Bold Italic" size="14.0" />
          </font>
       </Label>
-      <TextField fx:id="tableInput" layoutX="545.0" layoutY="150.0" prefHeight="30.0" prefWidth="160.0" promptText="Input the Table Name" />
-      <Button fx:id="btnSelect" blendMode="DARKEN" layoutX="585.0" layoutY="20.0" mnemonicParsing="false" onAction="#onComboBoxClick" prefHeight="20.0" prefWidth="75.0" text="Submit">
+      <TextField fx:id="tableInput" layoutX="653.0" layoutY="145.0" prefHeight="33.0" prefWidth="160.0" promptText="Input the Table Name" />
+      <Button fx:id="btnSelect" blendMode="DARKEN" layoutX="695.0" layoutY="28.0" mnemonicParsing="false" onAction="#onComboBoxClick" prefHeight="20.0" prefWidth="75.0" text="Submit">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
