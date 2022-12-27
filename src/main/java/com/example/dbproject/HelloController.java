@@ -36,11 +36,31 @@ public class HelloController implements Initializable {
     public void onButtonClick() {
         detectText.setText(textInput.getText());
         String r = textInput.getText();
-        System.out.println(r.substring(0,6));
-
         switch (r.substring(0,6)){
             case "SELECT":
-                selection(tableInput.getText(), textInput.getText());
+                switch (r.substring(7,10)){
+                    case "COU":
+                        if(r.substring(17, 18).equals("H"))
+                            selectPart("HAVING", textInput.getText());
+                        else
+                            selectPart("COUNT", textInput.getText());
+                        break;
+                    case "SUM":
+                        selectPart("SUM", textInput.getText());
+                        break;
+                    case "max":
+                        selectPart("MAX", textInput.getText());
+                        break;
+                    case "min":
+                        selectPart("MIN", textInput.getText());
+                        break;
+                    case "avg":
+                        selectPart("AVG", textInput.getText());
+                        break;
+                    default:
+                        selection(tableInput.getText(), textInput.getText());
+                        break;
+                }
                 break;
             case "INSERT":
                 insertion(textInput.getText());
